@@ -1,17 +1,45 @@
 package bucky;
-
+import java.util.Scanner;
 class apples{
 
 	public static void main(String args[]){
 		
+		//Constructor
+		tuna tunaObject= new tuna();
+		tunaObject.saying();
 		
-		int counter = 0;
+		//Many methods and instances
+//		Scanner input = new Scanner(System.in);
+//		tuna tunaObject= new tuna();
+//		
+//		System.out.println("Enter name of first gf here: ");
+//		String temp = input.nextLine();
+//		
+//		tunaObject.setName(temp);
+//		tunaObject.saying();
 		
-		while (counter<10)
-		{
-			System.out.println(counter);
-			counter++;
-		}
+//		Scanner input = new Scanner(System.in);
+//		tuna tunaObject= new tuna();
+//		
+//		System.out.println("Enter your name here: ");
+//		String name = input.nextLine();
+//		
+//		tunaObject.simpleMessage(name);
+		
+		
+		
+//		tuna tunaObject = new tuna();
+//		
+//		tunaObject.simpleMessage();
+//		
+		
+//		int counter = 0;
+//		
+//		while (counter<10)
+//		{
+//			System.out.println(counter);
+//			counter++;
+//		}
 		
 //		int age;
 //		age = 7;
