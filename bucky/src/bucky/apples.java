@@ -1,13 +1,160 @@
 package bucky;
 import java.util.Scanner;
+import java.util.Random;	
 class apples{
 
 	public static void main(String args[]){
+		//Array Elements as Counters
+		
+		Random rand = new Random();
+		int freq[] = new int[7];
+		
+		for (int roll = 1; roll < 1000; roll++) {
+			++freq[1+rand.nextInt(6)];
+		}
+		
+		System.out.println("Face\tFrequency");
+		
+		for(int face=1;face<freq.length;face++){
+			System.out.println(face+"\t"+freq[face]);
+		}
+		//Summing Array Element
+//		int bucky[]={21,16,86,21,3};
+//		int sum=0;
+//		for (int counter = 0; counter < bucky.length; counter++) {
+//			sum+=bucky[counter];
+//		}
+//		System.out.println("The sum of these number is: " + sum);
+		
+		//Creating and Array Table
+//		System.out.println("Index\tValue");
+//		int bucky[]={32,12,18,54,2};
+//		
+//		for (int counter = 0; counter < bucky.length; counter++) {
+//			System.out.println(counter + "\t" + bucky[counter]);
+//		}
+		
+		//Introduction to Array
+//		int bucky[]={2,4,5,7,9};//Array initializer
+//		
+//		System.out.println(bucky[2]);
+		
+//		int bucky[] = new int[10];
+//		
+//		bucky[0] = 87;
+//		bucky[1] = 543;
+//		bucky[9] = 65;
+//		
+//		System.out.println(bucky[1]);
+		//Random Number Generator
+//		Random dice = new Random();
+//		int number;
+//		for (int counter = 0; counter <= 10; counter++) {
+//			number = 1 + dice.nextInt(6);
+//			System.out.println(number);
+//			
+//		}
+//			
+		
+		//Math class method
+//		System.out.println(Math.abs(-26.7));
+//		System.out.println(Math.ceil(7.4));
+//		System.out.println(Math.floor(7.4));
+//		System.out.println(Math.max(8.6,5.2));
+//		System.out.println(Math.min(8.6,5.2));
+//		System.out.println(Math.pow(5,3));
+//		System.out.println(Math.sqrt(9));
+		
+		//do while loops
+//		int counter = 15;
+//		
+//		do{
+//			System.out.println(counter);
+//			counter++;
+//		}while(counter<=10);
+				
+		//Compound Interest Program
+		//A = P(1+R)^
+		
+//		double amount;
+//		double principal = 10000;
+//		double rate = .01;
+//		
+//		for (int day = 1; day <= 20; day++) {
+//			amount=principal*Math.pow(1+rate,day);
+//			System.out.println(day+ " "+ amount);
+//			
+//		}
+		
+		
+		
+		//for loops
+//		for (int counter = 6; counter <= 21; counter+=3) {
+//			System.out.println(counter);
+//		}
+		
+		
+		//Simple Averaging Program
+//		Scanner input = new Scanner(System.in);
+//		int total = 0;
+//		int grade;
+//		int average;
+//		int counter = 0;
+//		
+//		while (counter<10){
+//			
+//			grade = input.nextInt();
+//			total = total+grade;
+//			counter++;
+//			
+//		}
+//		
+//		average = total/10;
+//		System.out.println("Your average is: "+ average);
+		
+		//Conditional Operator
+//		int age = 21;
+//		
+//		System.out.println(age >50?"You are old":"You are young");
+//		
+//		
+//		//else if statement
+//		int age = 55;
+//		
+//		if(age>=60)
+//			System.out.println("You are a senior citizen");
+//		else if(age>=50)
+//			System.out.println("You are in younr 50s");
+//		else if(age>=40)
+//			System.out.println("You are in younr 40s");
+//		else
+//			System.out.println("You are a young buck");
+//		
+		
+		//Nested if statements
+//		int age = 60;
+//		
+//		if(age< 50)
+//		{
+//			System.out.println("You are young");
+//		}
+//		else{
+//			System.out.println("You are old");
+//			if(age > 75){
+//				System.out.println("You are REALLY old!");
+//			}
+//			else{
+//				System.out.println("dont worry you arent really that old");
+//			}
+//		}
+		
 		
 		//Constructor
-		tuna tunaObject= new tuna();
-		tunaObject.saying();
-		
+//		tuna tunaObject= new tuna("Kelsey");
+//		tuna tunaObject2= new tuna("Nicole");
+//		tunaObject.saying();
+//		tunaObject2.saying();
+//		
 		//Many methods and instances
 //		Scanner input = new Scanner(System.in);
 //		tuna tunaObject= new tuna();
