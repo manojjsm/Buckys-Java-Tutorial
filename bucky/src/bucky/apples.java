@@ -4,20 +4,65 @@ import java.util.Random;
 class apples{
 
 	public static void main(String args[]){
+		
+		//Time class
+		tuna tunaObject = new tuna();
+		
+		System.out.println(tunaObject.toMilitary());
+		tunaObject.setTime(13, 27, 6);
+		System.out.println(tunaObject.toMilitary());
+		
+		
+		//Variable Length
+		//System.out.println(average(43,56,76,8,65,76,2,31));
+		
+		
+		
+		//Multidimensional Array
+//		int firstarray[][] = {{8,9,10,11},{12,13,14,15}};
+//		int secondarray[][]= {{30,31,32,33},{43},{4,5,6}};
+//		System.out.println("This is the first array: ");
+//		display(firstarray);
+//		System.out.println("This is the second array: ");
+//		display(secondarray);
+		
+		//int val = secondarray[0][1];
+		//firstarray[0][1];
+		
+		
+		
+		//Arrays in methods
+//		int bucky[]={3,4,5,6,7};
+//		change(bucky);
+//		for(int y:bucky)
+//		{
+//			System.out.println(y);
+//		}
+		
+		
+		//Enhanced for loop
+//		int bucky[]={3,4,5,6,7};
+//		int total=0;
+//		
+//		for(int x:bucky){
+//			total+=x;
+//		}
+//		
+//		System.out.println(total);
+		
 		//Array Elements as Counters
-		
-		Random rand = new Random();
-		int freq[] = new int[7];
-		
-		for (int roll = 1; roll < 1000; roll++) {
-			++freq[1+rand.nextInt(6)];
-		}
-		
-		System.out.println("Face\tFrequency");
-		
-		for(int face=1;face<freq.length;face++){
-			System.out.println(face+"\t"+freq[face]);
-		}
+//		Random rand = new Random();
+//		int freq[] = new int[7];
+//		
+//		for (int roll = 1; roll < 1000; roll++) {
+//			++freq[1+rand.nextInt(6)];
+//		}
+//		
+//		System.out.println("Face\tFrequency");
+//		
+//		for(int face=1;face<freq.length;face++){
+//			System.out.println(face+"\t"+freq[face]);
+//		}
 		//Summing Array Element
 //		int bucky[]={21,16,86,21,3};
 //		int sum=0;
@@ -222,5 +267,31 @@ class apples{
 //			System.out.println("You cannot enter");
 //		}
 //		
+	}
+	
+	public static void change(int x[])
+	{
+		for(int counter = 0; counter<x.length;counter++)
+			x[counter]+=5;
+		
+		
+	}
+	
+	public static void display(int x[][]){
+		for (int row = 0; row < x.length; row++) {
+			for (int column = 0; column < x[row].length; column++) {
+				System.out.print(x[row][column] + " \t");
+			}
+			System.out.println();
+		}
+	}
+	
+	public static int average(int...numbers)
+	{
+		int total=0;
+		for(int x:numbers)
+			total+=x;
+		
+		return total/numbers.length;
 	}
 }
