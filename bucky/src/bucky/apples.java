@@ -5,13 +5,21 @@ class apples{
 
 	public static void main(String args[]){
 		
-		//Time class
+		//Display Regular time
 		tuna tunaObject = new tuna();
-		
 		System.out.println(tunaObject.toMilitary());
+		System.out.println(tunaObject.toString());
 		tunaObject.setTime(13, 27, 6);
 		System.out.println(tunaObject.toMilitary());
+		System.out.println(tunaObject.toString());
 		
+		//Time class
+//		tuna tunaObject = new tuna();
+//		
+//		System.out.println(tunaObject.toMilitary());
+//		tunaObject.setTime(13, 27, 6);
+//		System.out.println(tunaObject.toMilitary());
+//		
 		
 		//Variable Length
 		//System.out.println(average(43,56,76,8,65,76,2,31));
