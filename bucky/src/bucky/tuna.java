@@ -1,17 +1,52 @@
 package bucky;
 
 public class tuna {
-	
-	//Time Class
+	//Multiple Constructor
 	private int hour;
 	private int minute;
 	private int second;
 	
-	public void setTime(int h, int m, int s){
-		hour = ((h>=0 && h<24) ? h : 0);
-		minute = ((m>=0 && m<60) ? m : 0);
-		second = ((s>=0 && s<60) ? s : 0);
+	public tuna(){
+		this(0,0,0);
 	}
+	
+	public tuna(int h){
+		this(h,0,0);
+	}
+	
+	public tuna(int h, int m){
+		this(h,m,0);
+	}	
+	public tuna(int h, int m, int s){
+		setTime(h,m,s);
+	}
+	
+	public void setTime(int h, int m, int s)
+	{
+//		setHour(h);
+//		setMinute(m);
+//		setSecond(s);
+	}
+	//Public,Private and This
+//	private int hour =1;
+//	private int minute =2 ;
+//	private int second =3;
+//	
+//	public void setTime(int hour, int minute, int second){
+//		this.hour = ((hour>=0 && hour<24) ? hour : 0);
+//		this.minute = ((minute>=0 && minute<60) ? minute : 0);
+//		this.second = ((second>=0 && second<60) ? second : 0);
+//	}
+	//Time Class
+//	private int hour;
+//	private int minute;
+//	private int second;
+//	
+//	public void setTime(int h, int m, int s){
+//		hour = ((h>=0 && h<24) ? h : 0);
+//		minute = ((m>=0 && m<60) ? m : 0);
+//		second = ((s>=0 && s<60) ? s : 0);
+//	}
 	
 	public String toMilitary()
 	{
