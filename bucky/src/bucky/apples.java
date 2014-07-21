@@ -4,13 +4,29 @@ import java.util.Random;
 class apples{
 
 	public static void main(String args[]){
+		//toString
+		
+		potpie potObject = new potpie(4,5,6);
+		
+		//Building Objects for constructors
+		//--Overloaded constructor
+//		tuna tunaObject = new tuna();
+//		tuna tunaObject2 = new tuna(5);
+//		tuna tunaObject3 = new tuna(5,13);
+//		tuna tunaObject4 = new tuna(5,13,43);
+//		
+//		System.out.printf("%s\n", tunaObject.toMilitary());
+//		System.out.printf("%s\n", tunaObject2.toMilitary());
+//		System.out.printf("%s\n", tunaObject3.toMilitary());
+//		System.out.printf("%s\n", tunaObject4.toMilitary());
+		
 		//Public, Private and this
-		tuna tunaObject = new tuna();
-		System.out.println(tunaObject.toMilitary());
-		System.out.println(tunaObject.toString());
-		tunaObject.setTime(13, 27, 6);
-		System.out.println(tunaObject.toMilitary());
-		System.out.println(tunaObject.toString());
+//		tuna tunaObject = new tuna();
+//		System.out.println(tunaObject.toMilitary());
+//		System.out.println(tunaObject.toString());
+//		tunaObject.setTime(13, 27, 6);
+//		System.out.println(tunaObject.toMilitary());
+//		System.out.println(tunaObject.toString());
 		
 		//Display Regular time
 //		tuna tunaObject = new tuna();
