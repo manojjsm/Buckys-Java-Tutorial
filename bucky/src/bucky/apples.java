@@ -4,9 +4,16 @@ import java.util.Random;
 class apples{
 
 	public static void main(String args[]){
+		
+		//43 Composition - Refering to objects in other classes
+		potpie potObject = new potpie(4,5,6);
+		tuna tunaObject = new tuna("Greg",potObject);
+		
+		System.out.println(tunaObject);
+		
 		//toString
 		
-		potpie potObject = new potpie(4,5,6);
+//		potpie potObject = new potpie(4,5,6);
 		
 		//Building Objects for constructors
 		//--Overloaded constructor
