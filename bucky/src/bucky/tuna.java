@@ -1,19 +1,45 @@
 package bucky;
 
-public class tuna {
+//Enumeration
+
+public enum tuna{
+	bucky("nice","22"),
+	kelsey("cutie","10"),
+	julia("bigmistake","12"),
+	nicole("italian","13"),
+	candy("different","14"),
+	erin("iwish","16");
+	
+	private final String desc;
+	private final String year;
+	
+	tuna(String description, String birthdya){
+		desc = description;
+		year = birthdya;
+	}
+	
+	public String getDesc(){
+		return desc;
+	}
+	public String getYear(){
+		return year;
+	}
+}
+
+//public class tuna {
 	
 	//43 Composition
-	private String name;
-	private potpie birthday;
-	
-	public tuna(String theName,potpie theDate){
-		name = theName;
-		birthday = theDate;
-	}
-	
-	public String toString(){
-		return String.format("My name is %s, my birthday is %s", name, birthday );
-	}
+//	private String name;
+//	private potpie birthday;
+//	
+//	public tuna(String theName,potpie theDate){
+//		name = theName;
+//		birthday = theDate;
+//	}
+//	
+//	public String toString(){
+//		return String.format("My name is %s, my birthday is %s", name, birthday );
+//	}
 	
 	///Set and Get method
 //	private int hour;
@@ -150,4 +176,4 @@ public class tuna {
 //	{
 //		System.out.println("This is another class");
 //	}
-}
+//}
