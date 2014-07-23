@@ -2,32 +2,42 @@ package bucky;
 
 //Enumeration
 
-public enum tuna{
-	bucky("nice","22"),
-	kelsey("cutie","10"),
-	julia("bigmistake","12"),
-	nicole("italian","13"),
-	candy("different","14"),
-	erin("iwish","16");
-	
-	private final String desc;
-	private final String year;
-	
-	tuna(String description, String birthdya){
-		desc = description;
-		year = birthdya;
-	}
-	
-	public String getDesc(){
-		return desc;
-	}
-	public String getYear(){
-		return year;
-	}
-}
+//public enum tuna{
+//	bucky("nice","22"),
+//	kelsey("cutie","10"),
+//	julia("bigmistake","12"),
+//	nicole("italian","13"),
+//	candy("different","14"),
+//	erin("iwish","16");
+//	
+//	private final String desc;
+//	private final String year;
+//	
+//	tuna(String description, String birthdya){
+//		desc = description;
+//		year = birthdya;
+//	}
+//	
+//	public String getDesc(){
+//		return desc;
+//	}
+//	public String getYear(){
+//		return year;
+//	}
+//}
 
-//public class tuna {
+public class tuna {
+	//Static
+	private String first;
+	private String last;
+	private static int member = 0;
 	
+	public tuna(String fn, String ln){
+		first = fn;
+		last = ln;
+		member++;
+		System.out.printf("Constructor for %s %s, members in the club: %d\n", first,last, member  );
+	}
 	//43 Composition
 //	private String name;
 //	private potpie birthday;
@@ -176,4 +186,4 @@ public enum tuna{
 //	{
 //		System.out.println("This is another class");
 //	}
-//}
+}

@@ -5,14 +5,19 @@ import java.util.EnumSet;
 class apples{
 
 	public static void main(String args[]){
+		//46- Static
+		tuna member1 = new tuna("Megan","Fox");
+		tuna member2 = new tuna("Natalie","Portman");
+		tuna member3 = new tuna("Taylor","Swift");
+		
 		//44-Enumeration
-		for(tuna people:tuna.values()){
-			System.out.printf("%s\t%s\t%s\n",people,people.getDesc(),people.getYear());
-		}
-		//45-EnumSet range
-		System.out.println("\nAnd now for the range of constants!!\n");
-		for(tuna people:EnumSet.range(tuna.kelsey,tuna.candy))
-			System.out.printf("%s\t%s\t%s\n",people,people.getDesc(),people.getYear());
+//		for(tuna people:tuna.values()){
+//			System.out.printf("%s\t%s\t%s\n",people,people.getDesc(),people.getYear());
+//		}
+//		//45-EnumSet range
+//		System.out.println("\nAnd now for the range of constants!!\n");
+//		for(tuna people:EnumSet.range(tuna.kelsey,tuna.candy))
+//			System.out.printf("%s\t%s\t%s\n",people,people.getDesc(),people.getYear());
 		
 		//43 Composition - Refering to objects in other classes
 //		potpie potObject = new potpie(4,5,6);
