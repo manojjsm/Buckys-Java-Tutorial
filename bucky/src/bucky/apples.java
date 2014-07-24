@@ -2,13 +2,47 @@ package bucky;
 import java.util.Scanner;
 import java.util.Random;
 import java.util.EnumSet;
+
+import javax.swing.JOptionPane;
+
 class apples{
 
 	public static void main(String args[]){
-		//46- Static
-		tuna member1 = new tuna("Megan","Fox");
-		tuna member2 = new tuna("Natalie","Portman");
-		tuna member3 = new tuna("Taylor","Swift");
+		//50-GUI
+		String fn = JOptionPane.showInputDialog("Enter first number");
+		String sn = JOptionPane.showInputDialog("Enter second number");
+		
+		int num1 = Integer.parseInt(fn);
+		int num2 = Integer.parseInt(sn);
+		int sum = num1 + num2;
+		
+		JOptionPane.showMessageDialog(null,"The answer is "+sum,"The title",JOptionPane.PLAIN_MESSAGE);		
+		//49-Inheritance
+//		tuna tunaObject = new tuna();
+//		potpie potObject = new potpie();
+//		
+//		tunaObject.eat();
+//		potObject.eat();
+		
+		//48-final
+//		tuna tunaObject = new tuna(10);
+//		
+//		for (int i = 0; i < 5; i++) {
+//			tunaObject.add();
+//			System.out.printf("%s",tunaObject);
+//		}
+		//46-47 Static
+//		tuna member1 = new tuna("Megan","Fox");
+//		tuna member2 = new tuna("Natalie","Portman");
+//		tuna member3 = new tuna("Taylor","Swift");
+//		
+//		System.out.println(tuna.getMembers());
+		
+//		System.out.println();
+//		System.out.println(member2.getFirst());
+//		System.out.println(member2.getLast());
+//		System.out.println(member2.getMembers());
+		
 		
 		//44-Enumeration
 //		for(tuna people:tuna.values()){

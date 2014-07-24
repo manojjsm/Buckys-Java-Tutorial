@@ -26,18 +26,54 @@ package bucky;
 //	}
 //}
 
-public class tuna {
-	//Static
-	private String first;
-	private String last;
-	private static int member = 0;
+public class tuna extends potpie{
+	//49-Inheritance
+//	public void eat(){
+//		System.out.println("I am the eat method of tuna");
+//	}
 	
-	public tuna(String fn, String ln){
-		first = fn;
-		last = ln;
-		member++;
-		System.out.printf("Constructor for %s %s, members in the club: %d\n", first,last, member  );
-	}
+	//48-final
+//	private int sum;
+//	private final int NUMBER;
+//	
+//	public tuna(int x){
+//		NUMBER=x;
+//	}
+//	
+//	public void add(){
+//		sum+=NUMBER;
+//	}
+//	
+//	public String toString(){
+//		return String.format("sum = %d\n",sum);
+//	}
+	
+		
+	
+	//46-47 Static
+//	private String first;
+//	private String last;
+//	private static int member = 0; // Static means it shared for all the object inside the class
+//	
+//	public tuna(String fn, String ln){
+//		first = fn;
+//		last = ln;
+//		member++;
+//		System.out.printf("Constructor for %s %s, members in the club: %d\n", first,last, member  );
+//	}
+//	
+//	public String getFirst(){
+//		return first;
+//	}
+//	public String getLast(){
+//		return last;
+//	}
+//	
+//	public static int getMembers(){
+//		return member;
+//	}
+	
+	
 	//43 Composition
 //	private String name;
 //	private potpie birthday;
