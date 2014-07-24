@@ -1,6 +1,11 @@
 package bucky;
 
 public class potpie extends food{
+	//55 intro to polymorphism
+	void eat(){
+		System.out.println("This potpie is great");
+	}
+	
 	//toString
 //	private int month;
 //	private int day;

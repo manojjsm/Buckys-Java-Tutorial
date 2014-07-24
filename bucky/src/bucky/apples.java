@@ -9,12 +9,25 @@ import javax.swing.JFrame;
 class apples{
 
 	public static void main(String args[]){
-		//54 Event Handler Program
-		tuna bucky = new tuna();
 		
-		bucky.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		bucky.setSize(350,100);
-		bucky.setVisible(true);
+		//55 intro to polymorphism
+		food bucky[]= new food[2];
+		bucky[0] = new potpie();
+		bucky[1] = new tuna();
+		
+		for (int x = 0; x < 2; x++) {
+			bucky[x].eat();
+		}
+		
+//		tuna bucky = new tuna();
+//		food bucky = new tuna();
+		
+		//54 Event Handler Program
+//		tuna bucky = new tuna();
+//		
+//		bucky.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		bucky.setSize(350,100);
+//		bucky.setVisible(true);
 		
 		//51-GUI with JFrame
 //		tuna bucky = new tuna();
