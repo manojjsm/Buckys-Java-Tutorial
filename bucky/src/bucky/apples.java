@@ -9,8 +9,12 @@ import javax.swing.JFrame;
 class apples{
 
 	public static void main(String args[]){
-		//53 Action Listener
+		//54 Event Handler Program
+		tuna bucky = new tuna();
 		
+		bucky.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		bucky.setSize(350,100);
+		bucky.setVisible(true);
 		
 		//51-GUI with JFrame
 //		tuna bucky = new tuna();

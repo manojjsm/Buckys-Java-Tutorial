@@ -8,7 +8,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JOptionPane;
 
 
-//52-53Event Handling/Action Listener
+//52-54Event Handling/Action Listener/Event handling program
 public class tuna extends JFrame{
 	
 	private JTextField item1;
@@ -55,6 +55,9 @@ public class tuna extends JFrame{
 			else if(event.getSource()==passwordField){
 				string = String.format("password field is : %s", event.getActionCommand());
 			}
+			
+			JOptionPane.showMessageDialog(null, string);
+			
 		}
 		
 	}
