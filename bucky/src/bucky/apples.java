@@ -9,15 +9,21 @@ import javax.swing.JFrame;
 class apples{
 
 	public static void main(String args[]){
+		//56-Polymorphic arguments
+		fatty bucky = new fatty();
+		food fo = new food();
+		food po = new potpie();
+		bucky.digest(fo);
+		bucky.digest(po);
 		
 		//55 intro to polymorphism
-		food bucky[]= new food[2];
-		bucky[0] = new potpie();
-		bucky[1] = new tuna();
-		
-		for (int x = 0; x < 2; x++) {
-			bucky[x].eat();
-		}
+//		food bucky[]= new food[2];
+//		bucky[0] = new potpie();
+//		bucky[1] = new tuna();
+//		
+//		for (int x = 0; x < 2; x++) {
+//			bucky[x].eat();
+//		}
 		
 //		tuna bucky = new tuna();
 //		food bucky = new tuna();
