@@ -9,6 +9,10 @@ import javax.swing.JFrame;
 class apples{
 
 	public static void main(String args[]){
+		
+		//57-Overiding Rules
+		
+		
 		//56-Polymorphic arguments
 		fatty bucky = new fatty();
 		food fo = new food();
