@@ -9,16 +9,25 @@ import javax.swing.JFrame;
 class apples{
 
 	public static void main(String args[]){
+		//58 Abstract and Concrete class
+//		concrete class - you can make object of it.
+//		food fo = tuna();
+//		abstract method must be overriden
 		
 		//57-Overiding Rules
+		//everytime you overide a method you need to have the same argument
+		//should have the same access modifier
+		//overloaded have the same name but have a different argument
+		//overiding and overloading is a different thing
+		//abstract - can only be inherited but you cannot create an object of it.
 		
 		
 		//56-Polymorphic arguments
-		fatty bucky = new fatty();
-		food fo = new food();
-		food po = new potpie();
-		bucky.digest(fo);
-		bucky.digest(po);
+//		fatty bucky = new fatty();
+//		food fo = new food();
+//		food po = new potpie();
+//		bucky.digest(fo);
+//		bucky.digest(po);
 		
 		//55 intro to polymorphism
 //		food bucky[]= new food[2];

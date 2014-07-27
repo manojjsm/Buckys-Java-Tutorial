@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 public class tuna extends food{
 	//55 intro to polymorphism
-	void eat(){
+	public void eat(){
 		System.out.println("This tuna is great");
 	}
 }

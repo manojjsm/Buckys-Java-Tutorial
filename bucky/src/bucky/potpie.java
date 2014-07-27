@@ -3,7 +3,7 @@ package bucky;
 public class potpie extends food{
 	
 	//55 intro to polymorphism
-	void eat(){
+	public void eat(){
 		System.out.println("This potpie is great");
 	}
 	
