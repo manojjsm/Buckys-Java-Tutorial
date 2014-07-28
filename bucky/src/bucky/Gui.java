@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
+import javax.swing.event.*;
 //import java.awt.FlowLayout;
 //import java.awt.event.ActionListener;
 //import java.awt.event.ActionEvent;
@@ -14,33 +15,63 @@ import javax.swing.*;
 
 public class Gui extends JFrame{
 	
-	//68-69 JComboBox/Drop Down list Program
-	private JComboBox box;
-	private JLabel picture;
+	//70-71 JList/JList Program
+	private JList list;
+	private static String[] colornames={"black","blue","red","white"};
+	private static Color[] colors= {Color.BLACK,Color.BLUE,Color.RED,Color.WHITE};
 	
-	private static String[] filename = {"images.jpg","cat.jpg"};
-	private Icon[] pics = {new ImageIcon(getClass().getResource(filename[0])),new ImageIcon(getClass().getResource(filename[1]))};
 	
 	public Gui(){
 		super("the title");
 		setLayout(new FlowLayout());
 		
-		box = new JComboBox(filename);
-		box.addItemListener(
-				new ItemListener(){
-					public void itemStateChanged(ItemEvent event){
-						if(event.getStateChange()==ItemEvent.SELECTED){
-							picture.setIcon(pics[box.getSelectedIndex()]);
-						}
+		list = new JList(colornames);
+		list.setVisibleRowCount(4);
+		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		
+		add(new JScrollPane(list));
+		
+		list.addListSelectionListener(
+				new ListSelectionListener() {
+					
+					@Override
+					public void valueChanged(ListSelectionEvent e) {
+						// TODO Auto-generated method stub
+						getContentPane().setBackground(colors[list.getSelectedIndex()]);
 					}
 				}
 		);
 		
-		add(box);
-		picture = new JLabel(pics[0]);
-		add(picture);
-		
 	}
+	
+	
+	//68-69 JComboBox/Drop Down list Program
+//	private JComboBox box;
+//	private JLabel picture;
+//	
+//	private static String[] filename = {"images.jpg","cat.jpg"};
+//	private Icon[] pics = {new ImageIcon(getClass().getResource(filename[0])),new ImageIcon(getClass().getResource(filename[1]))};
+//	
+//	public Gui(){
+//		super("the title");
+//		setLayout(new FlowLayout());
+//		
+//		box = new JComboBox(filename);
+//		box.addItemListener(
+//				new ItemListener(){
+//					public void itemStateChanged(ItemEvent event){
+//						if(event.getStateChange()==ItemEvent.SELECTED){
+//							picture.setIcon(pics[box.getSelectedIndex()]);
+//						}
+//					}
+//				}
+//		);
+//		
+//		add(box);
+//		picture = new JLabel(pics[0]);
+//		add(picture);
+//		
+//	}
 	//66-JRadioButton
 //	private JTextField tf;
 //	private Font pf;
