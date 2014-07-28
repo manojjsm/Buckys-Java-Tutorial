@@ -1,14 +1,45 @@
 package bucky;
+import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Random;
 import java.util.EnumSet;
-
 import javax.swing.JOptionPane;
 import javax.swing.JFrame;
 
 class apples{
 
 	public static void main(String args[]){
+		//63 - JButton Final Program
+		Gui go = new Gui();
+		
+		go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		go.setSize(3000, 300);
+		go.setVisible(true);
+		
+		//61-Simple Polymorphic Program
+//		Animal[] thelist = new Animal[2];
+//		Dog d = new Dog();
+//		Fish f = new Fish();
+//		thelist[0] = d;
+//		thelist[1] = f;
+//		
+//		for (Animal x : thelist) {
+//			x.noise();
+//		}
+		
+		//60-Array Holding Many Objects
+//		AnimalList ALO = new AnimalList();
+//		Dog d = new Dog();
+//		Fish f = new Fish();
+//		ALO.add(d);
+//		ALO.add(f);
+				
+		
+		//59-Class to hold objects
+//		DogList DLO = new DogList();
+//		Dog d = new Dog();
+//		DLO.add(d);		
+		
 		//58 Abstract and Concrete class
 //		concrete class - you can make object of it.
 //		food fo = tuna();
