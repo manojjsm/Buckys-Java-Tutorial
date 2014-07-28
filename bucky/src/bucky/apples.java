@@ -9,11 +9,12 @@ import javax.swing.JFrame;
 class apples{
 
 	public static void main(String args[]){
+		//64-65 JcheckBox/The Final Check Box Program
 		//63 - JButton Final Program
 		Gui go = new Gui();
 		
 		go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		go.setSize(3000, 300);
+		go.setSize(300, 300);
 		go.setVisible(true);
 		
 		//61-Simple Polymorphic Program
