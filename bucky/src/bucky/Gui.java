@@ -1,7 +1,6 @@
 package bucky;
 import java.awt.*;
 import java.awt.event.*;
-
 import javax.swing.*;
 import javax.swing.event.*;
 //import java.awt.FlowLayout;
@@ -15,34 +14,123 @@ import javax.swing.event.*;
 
 public class Gui extends JFrame{
 	
-	//70-71 JList/JList Program
-	private JList list;
-	private static String[] colornames={"black","blue","red","white"};
-	private static Color[] colors= {Color.BLACK,Color.BLUE,Color.RED,Color.WHITE};
-	
-	
+	//74-76 Mouse Events/MouseListener/MouseMotionlistener interface
+	private JPanel mousepanel;
+	private JLabel statusbar;
 	public Gui(){
-		super("the title");
-		setLayout(new FlowLayout());
+		super("title");
+		mousepanel = new JPanel();
+		mousepanel.setBackground(Color.WHITE);
+		add(mousepanel,BorderLayout.CENTER);
 		
-		list = new JList(colornames);
-		list.setVisibleRowCount(4);
-		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		statusbar = new JLabel("default");
+		add(statusbar,BorderLayout.SOUTH);
 		
-		add(new JScrollPane(list));
-		
-		list.addListSelectionListener(
-				new ListSelectionListener() {
-					
-					@Override
-					public void valueChanged(ListSelectionEvent e) {
-						// TODO Auto-generated method stub
-						getContentPane().setBackground(colors[list.getSelectedIndex()]);
-					}
-				}
-		);
-		
+		Handlerclass handler = new Handlerclass();
+		mousepanel.addMouseListener(handler);
+		mousepanel.addMouseMotionListener(handler);
 	}
+	
+	private class Handlerclass implements MouseListener, MouseMotionListener{
+		public void mouseClicked(MouseEvent event){
+			statusbar.setText(String.format("Click at %d %d", event.getX(),event.getY()));
+			
+		}
+		
+		public void mousePressed(MouseEvent event){
+			statusbar.setText("you pressed down the mouse");
+		}
+		
+		public void mouseReleased(MouseEvent event){
+			statusbar.setText("you released the button");
+		}
+		
+		public void mouseEntered(MouseEvent event){
+			statusbar.setText("you entered the area");
+			mousepanel.setBackground(Color.RED);
+		}
+		
+		public void mouseExited(MouseEvent event){
+			statusbar.setText("the mouse has left the window");
+			mousepanel.setBackground(Color.WHITE);
+		}
+		
+		//these are mouse motion events
+		
+		public void mouseDragged(MouseEvent event){
+			statusbar.setText("you are dragging the mouse");
+		}
+		
+		public void mouseMoved(MouseEvent event){
+			statusbar.setText("you moved the mouse");
+		}
+	}
+	//72-73 Multiple Selection List/Moving List items program
+//	private JList leftlist;
+//	private JList rightlist;
+//	private JButton movebutton;
+//	private static String[] foods = {"bacon","wings","ham","beef","morebacon"};
+//	
+//	public Gui(){
+//		super("the title");
+//		setLayout(new FlowLayout());
+//		
+//		leftlist = new JList(foods);
+//		leftlist.setVisibleRowCount(3);
+//		leftlist.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+//		add(new JScrollPane(leftlist));
+//		
+//		movebutton = new JButton("Move -->");
+//		movebutton.addActionListener(
+//				new ActionListener() {
+//					
+//					@Override
+//					public void actionPerformed(ActionEvent arg0) {
+//						// TODO Auto-generated method stub
+//						rightlist.setListData(leftlist.getSelectedValues());
+//						
+//					}
+//				}
+//		);
+//		
+//		add(movebutton);
+//		rightlist = new JList();
+//		rightlist.setVisibleRowCount(3);
+//		rightlist.setFixedCellWidth(100);
+//		rightlist.setFixedCellHeight(15);
+//		rightlist.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+//		add(new JScrollPane(rightlist));
+//		
+//	}
+	
+	//70-71 JList/JList Program
+//	private JList list;
+//	private static String[] colornames={"black","blue","red","white"};
+//	private static Color[] colors= {Color.BLACK,Color.BLUE,Color.RED,Color.WHITE};
+//	
+//	
+//	public Gui(){
+//		super("the title");
+//		setLayout(new FlowLayout());
+//		
+//		list = new JList(colornames);
+//		list.setVisibleRowCount(4);
+//		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+//		
+//		add(new JScrollPane(list));
+//		
+//		list.addListSelectionListener(
+//				new ListSelectionListener() {
+//					
+//					@Override
+//					public void valueChanged(ListSelectionEvent e) {
+//						// TODO Auto-generated method stub
+//						getContentPane().setBackground(colors[list.getSelectedIndex()]);
+//					}
+//				}
+//		);
+//		
+//	}
 	
 	
 	//68-69 JComboBox/Drop Down list Program
