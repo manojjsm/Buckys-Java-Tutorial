@@ -14,57 +14,88 @@ import javax.swing.event.*;
 
 public class Gui extends JFrame{
 	
-	//74-76 Mouse Events/MouseListener/MouseMotionlistener interface
-	private JPanel mousepanel;
+	//77-Adapter classes
+	private String details;
 	private JLabel statusbar;
+	
 	public Gui(){
-		super("title");
-		mousepanel = new JPanel();
-		mousepanel.setBackground(Color.WHITE);
-		add(mousepanel,BorderLayout.CENTER);
+		super("the title");
+		statusbar = new JLabel("This is default");
 		
-		statusbar = new JLabel("default");
 		add(statusbar,BorderLayout.SOUTH);
+		addMouseListener(new MouseClass());
 		
-		Handlerclass handler = new Handlerclass();
-		mousepanel.addMouseListener(handler);
-		mousepanel.addMouseMotionListener(handler);
+		
 	}
 	
-	private class Handlerclass implements MouseListener, MouseMotionListener{
+	private class MouseClass extends MouseAdapter{
 		public void mouseClicked(MouseEvent event){
-			statusbar.setText(String.format("Click at %d %d", event.getX(),event.getY()));
+			details = String.format("You clicked %d ", event.getClickCount());
+			if (event.isMetaDown()) {
+				details += "with right mouse button";
+			}
+			else if (event.isAltDown()) {
+				details += "with center mouse button";
+			}
+			else
+				details += "with left mouse button";
 			
-		}
-		
-		public void mousePressed(MouseEvent event){
-			statusbar.setText("you pressed down the mouse");
-		}
-		
-		public void mouseReleased(MouseEvent event){
-			statusbar.setText("you released the button");
-		}
-		
-		public void mouseEntered(MouseEvent event){
-			statusbar.setText("you entered the area");
-			mousepanel.setBackground(Color.RED);
-		}
-		
-		public void mouseExited(MouseEvent event){
-			statusbar.setText("the mouse has left the window");
-			mousepanel.setBackground(Color.WHITE);
-		}
-		
-		//these are mouse motion events
-		
-		public void mouseDragged(MouseEvent event){
-			statusbar.setText("you are dragging the mouse");
-		}
-		
-		public void mouseMoved(MouseEvent event){
-			statusbar.setText("you moved the mouse");
+			statusbar.setText(details);
 		}
 	}
+	
+	//74-76 Mouse Events/MouseListener/MouseMotionlistener interface
+//	private JPanel mousepanel;
+//	private JLabel statusbar;
+//	public Gui(){
+//		super("title");
+//		mousepanel = new JPanel();
+//		mousepanel.setBackground(Color.WHITE);
+//		add(mousepanel,BorderLayout.CENTER);
+//		
+//		statusbar = new JLabel("default");
+//		add(statusbar,BorderLayout.SOUTH);
+//		
+//		Handlerclass handler = new Handlerclass();
+//		mousepanel.addMouseListener(handler);
+//		mousepanel.addMouseMotionListener(handler);
+//	}
+//	
+//	private class Handlerclass implements MouseListener, MouseMotionListener{
+//		public void mouseClicked(MouseEvent event){
+//			statusbar.setText(String.format("Click at %d %d", event.getX(),event.getY()));
+//			
+//		}
+//		
+//		public void mousePressed(MouseEvent event){
+//			statusbar.setText("you pressed down the mouse");
+//		}
+//		
+//		public void mouseReleased(MouseEvent event){
+//			statusbar.setText("you released the button");
+//		}
+//		
+//		public void mouseEntered(MouseEvent event){
+//			statusbar.setText("you entered the area");
+//			mousepanel.setBackground(Color.RED);
+//		}
+//		
+//		public void mouseExited(MouseEvent event){
+//			statusbar.setText("the mouse has left the window");
+//			mousepanel.setBackground(Color.WHITE);
+//		}
+//		
+//		//these are mouse motion events
+//		
+//		public void mouseDragged(MouseEvent event){
+//			statusbar.setText("you are dragging the mouse");
+//		}
+//		
+//		public void mouseMoved(MouseEvent event){
+//			statusbar.setText("you moved the mouse");
+//		}
+//	}
+	
 	//72-73 Multiple Selection List/Moving List items program
 //	private JList leftlist;
 //	private JList rightlist;

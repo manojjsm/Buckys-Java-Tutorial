@@ -1,22 +1,126 @@
 package bucky;
-import java.util.Iterator;
-import java.util.Scanner;
-import java.util.Random;
-import java.util.EnumSet;
-import javax.swing.JOptionPane;
-import javax.swing.JFrame;
+//import java.util.Iterator;
+//import java.util.Scanner;
+//import java.util.Random;
+//import java.util.EnumSet;
+//import javax.swing.JOptionPane;
+//import javax.swing.JFrame;
+import java.awt.Color;
+import java.io.File;
+import java.util.*;
+
+import javax.swing.*;
 
 class apples{
 
 	public static void main(String args[]){
+		//87-Series Finale
+		String a = "apples";
+		String b = "bucky";
+		String c = "BUCKY";
+		
+		System.out.println(a.length());
+		
+		if(a.equals("apples"))
+			System.out.println("it equals aples!");
+		
+		if(b.equalsIgnoreCase(c))
+			System.out.println("buckys match");
+		
+		//86-Drawing more Stuff
+//		JFrame f =new JFrame("Title");
+//		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		
+//		Peach p = new Peach();
+//		p.setBackground(Color.WHITE);
+//		f.add(p);
+//		f.setSize(500, 270);
+//		f.setVisible(true);
+
+		//85-JColorChooser
+//		Peach p = new Peach();
+//		p.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		//84-Drawing Grapphics
+//		JFrame f =new JFrame("Title");
+//		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		Peach p = new Peach();
+//		f.add(p);
+//		f.setSize(400, 250);
+//		f.setVisible(true);
+		
+		//83-FlowLayout
+//		Layout l = new Layout();
+//		l.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		l.setSize(300, 100);
+//		l.setVisible(true);
+		
+		//82-Exception handling
+//		Scanner input = new Scanner(System.in);
+//		int x=1;
+//		do{
+//		
+//		try{
+//		
+//			
+//			System.out.println("Enter first num: ");
+//			int n1 = input.nextInt();
+//			System.out.println("Enter second num: ");
+//			int n2 = input.nextInt();
+//			int sum = n1/n2;
+//			System.out.println(sum);
+//			x=2;
+//		}
+//		catch(Exception e){
+//			System.out.println("you cant do that");
+//		}
+//		
+//		}while(x==1);
+		
+		//81-Reading from files
+//		readfile rf = new readfile();
+//		
+//		rf.openFile();
+//		rf.readFile();
+//		rf.closefile();
+		
+		//80-Writing to files
+//		createfile g = new createfile();
+//		g.openFile();
+//		g.addRecords();
+//		g.closeFile();
+		
+		
+		//79-Creating Files
+//		final Formatter x;
+//		
+//		try{
+//			x = new Formatter("C:\\test\\fred.txt");
+//			System.out.println("you created a file");
+//		}
+//		catch(Exception e){
+//			System.out.println("you got an error");
+//		}
+		
+		//78-File Class
+//		File x = new File("C:\\test\\greg.txt");
+//		
+//		if(x.exists())
+//		{
+//			System.out.println(x.getName() + " exist!");
+//		}
+//		else
+//			System.out.println("this file doesnt exist");
+		
+		//77-Adapter classes
 		//72-73 Multiple Selection List/Moving List items program
 		//64-65 JcheckBox/The Final Check Box Program
 		//63 - JButton Final Program
-		Gui go = new Gui();
-		
-		go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		go.setSize(300, 300);
-		go.setVisible(true);
+//		Gui go = new Gui();
+//		
+//		go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		go.setSize(300, 300);
+//		go.setVisible(true);
 		
 		//61-Simple Polymorphic Program
 //		Animal[] thelist = new Animal[2];
